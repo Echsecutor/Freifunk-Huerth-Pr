@@ -1,0 +1,91 @@
+\documentclass[a4paper,18pt]{scrartcl}
+%% Basic packages:
+\usepackage[utf8]{inputenc}
+ \usepackage[scaled]{helvet}
+ \renewcommand*\familydefault{\sfdefault}
+
+%use the following font: http://www.ctan.org/tex-archive/fonts/roboto/
+%which uses
+%http://www.ctan.org/tex-archive/macros/latex/contrib/fontaxes
+%http://www.ctan.org/tex-archive/macros/latex/contrib/mweights
+%\usepackage[sfdefault,bold,condensed]{roboto}
+
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[plainpages=false]{hyperref}
+\usepackage[final,expansion=alltext,protrusion=alltext]{microtype} % improves kerning, spacing, extension, etc.
+\usepackage[landscape,margin=1cm]{geometry}
+
+
+%% Graphics:
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes,shapes.geometric,decorations.pathmorphing,calc,patterns}
+\usetikzlibrary{decorations.markings}
+
+%\usepackage{yfonts}
+
+
+% Freifunk-Magenta
+% color: #dc0067 (220,0,103) 
+\definecolor{ff-magenta}{RGB}{220,0,103}
+% Freifunk-Gelb
+% color: #ffb400 (255,180,0)
+\definecolor{ff-gelb}{RGB}{255,180,0}
+
+
+\begin{document}
+\begin{center}
+\textcolor{ff-gelb}{
+\rule{\textwidth}{0.5cm} 
+}\\[-0.5cm]
+%
+\huge \textbf{Freifunk}
+\hspace{2cm}
+\tikz[remember picture,overlay]{\node (KBUlabelAnk){};}
+\hspace{2cm}
+\textbf{K}öln-\textbf{B}onn-\textbf{U}mgebung
+
+\textcolor{ff-magenta}{
+\rule{\textwidth}{0.5cm} 
+}
+\end{center}
+
+\vspace{-1cm}
+
+\begin{minipage}{0.55\textwidth}
+\begin{tabular}{rl}
+WLAN (SSID):& \textbf{kbu.freifunk.net}\\
+Projektseite:& \textbf{http://kbu.freifunk.net}\\
+Karte:& \textbf{http://map.kbu.freifunk.net}
+\end{tabular}
+
+\bigskip
+
+Die Inhaberin dieses Geschäftes unterstützt das Freifunkprojekt und stellt dankenswerterweise einen Uplink zum Internet zur Verfügung.
+Dadurch ist das Internet frei und kostenlos aus diesem
+Freifunknetzwerk erreichbar.
+
+Möchtest auch \textbf{DU} dich am Netzwerk beteiligen, so informiere
+dich auf der Projektseite. Gerne stehen dir auch die Projektentwickler
+mit Rat und Tat zur Seite. Ansprechpartner in Stotzheim ist: \\
+Sebastian Schmittner <sebastian@schmittner.pw>
+
+\bigskip
+
+\textbf{MACH MIT und „TUWAT“ !}
+
+\end{minipage}
+%
+\hfill{}
+%
+\begin{minipage}{0.4\textwidth}
+\includegraphics[width=\textwidth]{Freifunk_Free-WiFi-spot_Sticker.png}
+\end{minipage}
+
+\begin{tikzpicture}[remember picture,overlay]
+\node[yshift=0.6cm] at (KBUlabelAnk) {\includegraphics[width=4.2cm]{v3_kbu}};
+\end{tikzpicture}
+
+
+\end{document}
